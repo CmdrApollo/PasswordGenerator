@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="text/javascript" src="main.js"></script>
+        <link rel="stylesheet" href="styles.css" />
+        <title>Password Generator</title>
+    </head>
+    <body>
+        <div>
+            <input type="range" min="8" max="32" value="20" onchange="on_slider_changed()" id="password_size">
+            <div id="password_size_text">
+                Password Length: 20
+            </div>
+            <input type="checkbox" checked id="lower">Use Lowercase Characters</input>
+            <input type="checkbox" checked id="upper">Use Uppercase Characters</input>
+            <input type="checkbox" checked id="number">Use Numbers</input>
+            <input type="checkbox" checked id="special">Use Special Characters</input>
+        </div>
+        <div>
+            <button onclick="submit_and_return_password()" type="submit">Submit</button>
+            <div id="finished">
+                Text Here
+            </div>
+        </div>
